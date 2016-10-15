@@ -1,7 +1,4 @@
-# EXAMPLE USAGE: python twitter_miner.py 'debate_tweets' \#hillary \#trump
-# This will monitor hashtags with #hillary and #trump and save tweets to test.csv
-# Uses a twitter app API key for generic twitter mining.
-# Note that if you want to mine hashtags, you have to use \ to escape the # in the command line
+# Use shebang here
 
 #Import the necessary methods from tweepy library
 from tweepy.streaming import StreamListener
@@ -87,13 +84,12 @@ class StdOutListener(StreamListener):
         time.sleep(10)
         return True
 
-
 def start_mining():
     #Variables that contains the user credentials to access Twitter API
-    consumer_key = "5vFwZ6qV3LXRxHWyyGznWBWPq"
-    consumer_secret = "NAo57USx8nXKkX1DRf2XfRaxvvZihNBZqMLjURNodGiPiESpl4"
-    access_token = "11518572-g11DtZXPUsg6PTicOe7b9SKqpbteVRXNcHJZaMahr"
-    access_token_secret = "dQKAkkS1Yg2LwOuos8fLyWyCiaGwXdVxNuKnggoz8qmxE"
+    consumer_key = ""
+    consumer_secret = "5vFwZ6qV3LXRxHWyyGznWBWPq"
+    access_token = ""
+    access_token_secret = ""
 
     l = StdOutListener()
     auth = OAuthHandler(consumer_key, consumer_secret)
